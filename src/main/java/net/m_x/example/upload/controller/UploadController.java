@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class UploadController {
-
     private final static Logger logger = Logger.getLogger(UploadController.class);
 
     @Autowired

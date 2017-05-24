@@ -1,7 +1,7 @@
 ----------------------------------------------------------------
-Wed May 24 02:48:37 CEST 2017:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.7.1.1 - (1040133): instance a816c00e-015c-37ed-3fb3-0000032417c8 
-on database directory /home/mx/projects/workspace/angular_test/Upload_example/localDB  with class loader WebappClassLoader
+Wed May 24 07:37:52 CEST 2017:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.11.1.1 - (1616546): instance a816c00e-015c-38f6-156b-0000078aed88 
+on database directory /home/mx/projects/workspace/angular_test/Upload_example/localDB with class loader WebappClassLoader
   context: /UploadExample
   delegate: false
   repositories:
@@ -9,7 +9,12 @@ on database directory /home/mx/projects/workspace/angular_test/Upload_example/lo
 ----------> Parent Classloader:
 ClassRealm[plugin>org.apache.tomcat.maven:tomcat7-maven-plugin:2.2, parent: sun.misc.Launcher$AppClassLoader@1f96302]
  
-Loaded from file:/home/mx/projects/workspace/angular_test/Upload_example/target/UploadExample/WEB-INF/lib/derby-10.7.1.1.jar
+Loaded from file:/home/mx/projects/workspace/angular_test/Upload_example/target/UploadExample/WEB-INF/lib/derby-10.11.1.1.jar
 java.vendor=Oracle Corporation
 java.runtime.version=1.8.0_131-b11
+user.dir=/home/mx/projects/workspace/angular_test/Upload_example
+os.name=Linux
+os.arch=i386
+os.version=4.4.0-31-generic
+derby.system.home=null
 Database Class Loader started - derby.database.classpath=''

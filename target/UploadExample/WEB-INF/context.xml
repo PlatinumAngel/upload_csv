@@ -18,7 +18,7 @@
     <bean id="jpaAdaptor" class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
         <property name="showSql" value="true" />
         <property name="generateDdl" value="true" />
-        <property name="databasePlatform" value="org.hibernate.dialect.H2Dialect" />
+        <property name="databasePlatform" value="org.hibernate.dialect.DerbyTenSevenDialect" />
     </bean>
 
     <bean id="sessionFactory"
@@ -30,6 +30,7 @@
             <props>
                 <prop key="hibernate.dialect">org.hibernate.dialect.DerbyTenSevenDialect</prop>
                 <prop key="hibernate.hbm2ddl.auto">update</prop>
+                <prop key="hibernate.default_schema">APP</prop>
             </props>
         </property>
         <property name="annotatedClasses">
