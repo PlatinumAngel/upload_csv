@@ -1,0 +1,9 @@
+/home/mx/projects/workspace/angular_test/Upload_example/src/main/java/net/m_x/example/upload/entity/LineEntity.java
+/home/mx/projects/workspace/angular_test/Upload_example/src/main/java/net/m_x/example/upload/entity/ElementEntity.java
+/home/mx/projects/workspace/angular_test/Upload_example/src/main/java/net/m_x/example/upload/dao/GroupEntityDao.java
+/home/mx/projects/workspace/angular_test/Upload_example/src/main/java/net/m_x/example/upload/dto/GroupDto.java
+/home/mx/projects/workspace/angular_test/Upload_example/src/main/java/net/m_x/example/upload/entity/GroupEntity.java
+/home/mx/projects/workspace/angular_test/Upload_example/src/main/java/net/m_x/example/upload/dto/LineDto.java
+/home/mx/projects/workspace/angular_test/Upload_example/src/main/java/net/m_x/example/upload/controller/UploadController.java
+/home/mx/projects/workspace/angular_test/Upload_example/src/main/java/net/m_x/example/upload/dao/hibernateImpl/GroupEntityDaoImpl.java
+/home/mx/projects/workspace/angular_test/Upload_example/src/main/java/net/m_x/example/upload/transformer/ElementTransformer.java
