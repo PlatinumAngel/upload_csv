@@ -10,6 +10,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class UploadController {
@@ -19,9 +20,11 @@ public class UploadController {
     private GroupEntityDao groupEntityDao;
 
     @RequestMapping(value = "/upload", method = RequestMethod.POST)
-    public void uploadContent(@RequestParam GroupDto content) {
+    public @ResponseBody
+    String uploadContent(@RequestParam GroupDto content) {
         logger.info("invoke request");
         GroupEntity group = new ElementTransformer(content).getGroupEntity();
         groupEntityDao.save(group);
+        return "OK";
     }
 }

@@ -11,7 +11,7 @@ public class ElementTransformer {
     private GroupEntity groupEntity;
 
     public ElementTransformer(GroupDto dto) {
-        GroupEntity groupEntity = new GroupEntity();
+        groupEntity = new GroupEntity();
         for(LineDto lineDto : dto.getRows()) {
             LineEntity line = getLineEntity(lineDto);
             groupEntity.add(line);
