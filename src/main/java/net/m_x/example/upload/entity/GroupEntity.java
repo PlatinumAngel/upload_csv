@@ -23,7 +23,7 @@ public class GroupEntity implements Serializable{
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Long id;
 
-    @OneToMany(mappedBy = "groupEntity")
+    @OneToMany(mappedBy = "groupEntity", cascade = CascadeType.ALL)
     private List<LineEntity> lines = new ArrayList<>();
 
     public void add(LineEntity lineEntity) {

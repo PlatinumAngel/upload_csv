@@ -10,8 +10,9 @@
         http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
     <context:annotation-config />
-    <context:component-scan base-package="net.m_x.example.upload.controller"/>
-    <context:component-scan base-package="net.m_x.example.upload.dao.hibernateImpl"/>
+    <context:component-scan base-package="net.m_x.example.upload.controller">
+        <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+    </context:component-scan>
 
     <mvc:annotation-driven
             content-negotiation-manager="contentNegotiationManager">
