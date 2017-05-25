@@ -10,9 +10,12 @@ function fillPreviewTemplateWithFile(file) {
 function submitCsvContent() {
     $.ajax({
         type : "POST",
-        contentType : "application/json",
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
         url : "api/upload",
-        data : parsedCsv,
+        data : JSON.stringify(parsedCsv),
         dataType : 'json',
         timeout : 100000,
         success : function(data) {

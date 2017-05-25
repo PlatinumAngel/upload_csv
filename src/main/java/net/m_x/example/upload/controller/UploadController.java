@@ -7,9 +7,9 @@ import net.m_x.example.upload.transformer.ElementTransformer;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
@@ -21,10 +21,10 @@ public class UploadController {
 
     @RequestMapping(value = "/upload", method = RequestMethod.POST)
     public @ResponseBody
-    String uploadContent(@RequestParam GroupDto content) {
+    String uploadContent(@RequestBody GroupDto content) {
         logger.info("invoke request");
         GroupEntity group = new ElementTransformer(content).getGroupEntity();
         groupEntityDao.save(group);
-        return "OK";
+        return "{ \"status\" : \"OK\"}";
     }
 }

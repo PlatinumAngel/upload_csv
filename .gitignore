@@ -1,4 +1,5 @@
 *.class
 target/classes/*
+target/UploadExample
 derby.log
 .idea
