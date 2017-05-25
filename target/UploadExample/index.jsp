@@ -31,9 +31,7 @@
         Please specify a csv file:<br/>
         <input id="fileInput" type="file" accept=".csv">
     </p>
-
     <div id="preview"></div>
-
 </form>
 
 <script type="text/javascript"

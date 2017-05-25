@@ -20,6 +20,7 @@ function submitCsvContent() {
         timeout : 100000,
         success : function(data) {
             console.log("SUCCESS: ", data);
+            fillTemplate("#handlebars-table-template", "#preview", {});
         },
         error : function(e) {
             console.log("ERROR: ", e);
