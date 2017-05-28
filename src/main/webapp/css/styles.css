@@ -72,13 +72,26 @@
   right: -20px;
   transition: 0.5s;
 }
-
 #submit:hover span {
   padding-right: 25px;
 }
-
 #submit:hover span:after {
   opacity: 1;
   right: 0;
 }
+body {
+    background-color: #CCCCCC;
+}
+h2 {
+    color : #4c8fc7;
+    text-align: center;
+    font-weight: bold;
+    font-size: large;
+}
+
+p {
+    color : #4c8fc7;
+    font-weight: bold;
+}
+
 

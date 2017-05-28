@@ -1,18 +1,7 @@
 <html>
-<link rel="stylesheet" href="css/styles.css">
-<style>
-
-body {
-    background-color: #CCCCCC;
-}
-
-/**/
-
-h2 {
-    color : #3c7fc7;
-}
-
-</style>
+<link rel="stylesheet" href="css/styles.css"/>
+<link rel="stylesheet" href="css/jquery-filestyle.min.css"/>
+<link rel="stylesheet" href="css/jquery-confirm.min.css"/>
 
 <body>
 <script type="text/javascript"
@@ -26,6 +15,9 @@ h2 {
                  src="js/LocalFileReader.js"></script>
 <script type="text/javascript"
                  src="js/CsvFileParser.js"></script>
+<script type="text/javascript"
+                 src="js/jquery-confirm.min.js"></script>
+
 
 <script id="handlebars-table-template" type="text/x-handlebars-template">
     <p>File preview:</p>
@@ -51,12 +43,15 @@ h2 {
 <form id="form" enctype="multipart/form-data" method="post"
             onsubmit="return false;">
 
-    <input id="fileInput" type="file" accept=".csv"
-        title="Choose a file" />
+<input id="fileInput" type="file"  accept=".csv"
+    class="jfilestyle" data-buttonBefore="true"
+    data-buttonText="<span class='glyphicon glyphicon-folder-open'>Choose file</span>"
+    />
     <div id="preview"></div>
 </form>
 
 <script type="text/javascript"
                  src="js/FooterViewConfiguration.js"></script>
+<script type="text/javascript" src="js/jquery-filestyle.min.js"></script>
 </body>
 </html>

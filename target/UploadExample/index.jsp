@@ -1,53 +1,7 @@
 <html>
-<link rel="stylesheet" href="css/styles.css">
-<style>
-
-body {
-    background-color: #CCCCCC;
-}
-
-/**/
-
-#submit {
-  border-radius: 4px;
-  background-color: #2c6fb7;
-  border: none;
-  color: #FFFFFF;
-  text-align: center;
-  font-size: 28px;
-  padding: 20px;
-  width: 200px;
-  transition: all 0.5s;
-  cursor: pointer;
-  margin: 5px;
-}
-
-#submit span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
-}
-
-#submit span:after {
-  content: '\00bb';
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.5s;
-}
-
-#submit:hover span {
-  padding-right: 25px;
-}
-
-#submit:hover span:after {
-  opacity: 1;
-  right: 0;
-}
-
-</style>
+<link rel="stylesheet" href="css/styles.css"/>
+<link rel="stylesheet" href="css/jquery-filestyle.min.css"/>
+<link rel="stylesheet" href="css/jquery-confirm.min.css"/>
 
 <body>
 <script type="text/javascript"
@@ -61,6 +15,9 @@ body {
                  src="js/LocalFileReader.js"></script>
 <script type="text/javascript"
                  src="js/CsvFileParser.js"></script>
+<script type="text/javascript"
+                 src="js/jquery-confirm.min.js"></script>
+
 
 <script id="handlebars-table-template" type="text/x-handlebars-template">
     <p>File preview:</p>
@@ -86,12 +43,15 @@ body {
 <form id="form" enctype="multipart/form-data" method="post"
             onsubmit="return false;">
 
-    <input id="fileInput" type="file" accept=".csv"
-        title="Choose a file" />
+<input id="fileInput" type="file"  accept=".csv"
+    class="jfilestyle" data-buttonBefore="true"
+    data-buttonText="<span class='glyphicon glyphicon-folder-open'>Choose file</span>"
+    />
     <div id="preview"></div>
 </form>
 
 <script type="text/javascript"
                  src="js/FooterViewConfiguration.js"></script>
+<script type="text/javascript" src="js/jquery-filestyle.min.js"></script>
 </body>
 </html>

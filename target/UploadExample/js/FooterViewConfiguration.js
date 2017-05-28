@@ -7,6 +7,8 @@ function fillPreviewTemplateWithFile(file) {
     });
 }
 
+document.getElementById('fileInput').addEventListener('change', fillPreviewTemplateWithFile, false);
+
 function submitCsvContent() {
     $.ajax({
         type : "POST",
@@ -19,22 +21,46 @@ function submitCsvContent() {
         dataType : 'json',
         timeout : 100000,
         success : function(data) {
-            console.log("SUCCESS: ", data);
+            afterSaveAction();
             fillTemplate("#handlebars-table-template", "#preview", {});
         },
         error : function(e) {
             console.log("ERROR: ", e);
         },
         done : function(e) {
-            console.log("DONE");
+            console.log("DONE", e);
         }
     });
 }
 
-document.getElementById('fileInput').addEventListener('change', fillPreviewTemplateWithFile, false);
+function afterSaveAction() {
+    $.alert({
+        title: 'Saved',
+        content: 'Content is saved on server',
+        useBootstrap: false,
+        boxWidth: '30%'
+    });
+}
 
 function sendContent() {
-    if(confirm("Do you want import this data?") === true) {
-        submitCsvContent();
-    }
+    $.confirm({
+        boxWidth: '30%',
+        useBootstrap: false,
+        title: 'Sending file',
+        content: 'Do you want to save content of this file?',
+        autoClose: 'cancelAction|10000',
+        buttons: {
+            saveFile: {
+                text: 'Save',
+                action: function () {
+                    submitCsvContent();
+                }
+            },
+            cancelAction: {
+                text: 'Cancel',
+                action: function () {
+                }
+            }
+        }
+    });
 }
