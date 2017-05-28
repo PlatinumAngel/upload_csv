@@ -3,3 +3,4 @@ target/classes/*
 target/UploadExample
 derby.log
 .idea
+.idea/workspace.xml
