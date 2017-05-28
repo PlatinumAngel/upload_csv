@@ -1,0 +1,84 @@
+.divTable{
+	display: table;
+	width: 100%;
+	table-layout:fixed;
+}
+.divTableRow {
+	display: table-row;
+	vertical-align:middle;
+    background-color:#80b3e5;
+    border:1px solid #ffffff;
+    border-width:0px 1px 1px 0px;
+    text-align:center;
+    padding:7px;
+    font-size:10px;
+    font-family:Arial;
+    font-weight:normal;
+    color:#fffcfc;
+}
+.divTableRow:hover .divTableCell{
+	background-color:#2c6fb7;
+}
+.divTableHeading {
+	background-color: #EEE;
+	display: table-header-group;
+}
+.divTableCell, .divTableHead {
+	border: 1px solid #999999;
+	display: table-cell;
+	padding: 3px 10px;
+}
+.divTableHeading {
+	background-color: #EEE;
+	display: table-header-group;
+	font-weight: bold;
+}
+.divTableFoot {
+	background-color: #EEE;
+	display: table-footer-group;
+	font-weight: bold;
+}
+.divTableBody {
+	display: table-row-group;
+}
+
+#submit {
+  border-radius: 4px;
+  background-color: #2c6fb7;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  margin-right: 0px;
+}
+
+#submit span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+#submit span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+#submit:hover span {
+  padding-right: 25px;
+}
+
+#submit:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
