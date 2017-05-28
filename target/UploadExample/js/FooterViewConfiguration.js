@@ -22,7 +22,6 @@ function submitCsvContent() {
         timeout : 100000,
         success : function(data) {
             afterSaveAction();
-            fillTemplate("#handlebars-table-template", "#preview", {});
         },
         error : function(e) {
             console.log("ERROR: ", e);

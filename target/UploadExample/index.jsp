@@ -20,7 +20,9 @@
 
 
 <script id="handlebars-table-template" type="text/x-handlebars-template">
-    <p>File preview:</p>
+    <div class="elementWithTooltip"><p>File preview:</p>
+        <span class="tooltip">Up to 10 first lines of uploaded file</span>
+    </div>
     <div class="divTable">
         <div class="divTableBody">
             {{#limitation rows 10}}
